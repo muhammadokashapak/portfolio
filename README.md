@@ -1,19 +1,48 @@
-# Muhamamad Okasha - Machine Learning Engineer Portfolio
+# Muhammad Okasha - Machine Learning Engineer Portfolio
 
-This is a personal portfolio website for Muhamamad Okasha, a Machine Learning Engineer. The site showcases skills, projects, and contact information.
+Welcome to my personal portfolio!  
+This site showcases my work, skills, and projects as a **Machine Learning Engineer** with a passion for building intelligent solutions.
 
-## Tech Stack
-- HTML
-- CSS
-- Python
-- C++
+## 🚀 About Me
+
+Hi, I'm **Muhammad Okasha** – a Machine Learning Engineer specializing in:
 - Machine Learning & Deep Learning
+- Computer Vision & NLP
+- Predictive Modeling & Data Science
+- Python, Scikit-learn, TensorFlow, Keras, OpenCV, Flask
 
-## Project Images
-![Screenshot 2024-11-16 223340](https://github.com/user-attachments/assets/62dc3607-0caa-4e91-a460-6621a0afe1c2)
-![Screenshot 2024-11-16 233802](https://github.com/user-attachments/assets/ded697c1-50e9-4868-ab17-c9f0440cc04b)
-![Screenshot 2024-11-16 233827](https://github.com/user-attachments/assets/0819858c-453d-4147-a67f-0d66afe53760)
-![Screenshot 2024-11-16 233857](https://github.com/user-attachments/assets/930d442b-202f-4dac-917c-51df6ca3f9a3)
-![Screenshot 2024-11-16 235114](https://github.com/user-attachments/assets/d61e3e4a-39d7-4737-bc5f-aae5c218fc96)
-![Screenshot 2024-11-16 233914](https://github.com/user-attachments/assets/ad387bf4-6075-4a9e-ac82-1e152b4f4c18)
-![Screenshot 2024-11-16 233944](https://github.com/user-attachments/assets/e39a8a10-7943-4e57-9832-6ada14f4cb3c)
+## 🛠️ Tech Stack
+
+- **Languages:** Python, JavaScript, HTML5, CSS3
+- **Frameworks/Libraries:** Scikit-learn, TensorFlow, Keras, OpenCV, Pandas, Flask
+- **Tools:** Git, GitHub, VS Code, Jupyter Notebook
+
+## 📂 Featured Projects
+
+| Project Name                        | Description                                                      | Tech Used                        |
+|--------------------------------------|------------------------------------------------------------------|----------------------------------|
+| Color Detection System               | Real-time color detection using computer vision and ML            | Python, OpenCV, Scikit-learn     |
+| Diabetes Testing System              | ML-based diabetes prediction with high accuracy                   | Python, Pandas, Scikit-learn     |
+| Fraud Detection System               | Advanced fraud detection using anomaly detection                  | Python, XGBoost, IsolationForest |
+| Car Price Prediction                 | ML model for car price prediction using regression                | Python, Pandas, Scikit-learn     |
+| Chicken Pox Detection                | Deep learning CNN model for medical diagnosis                     | Python, TensorFlow, Keras        |
+| Emotion Detection System             | Real-time emotion detection using Deep Learning and NLP           | Python, TensorFlow, BERT         |
+
+## 📫 Contact
+
+- **Email:** muhammadokasha195@gmail.com
+- **Phone:** +92 3495696659
+- **GitHub:** [muhammadokashapak](https://github.com/muhammadokashapak)
+- **LinkedIn:** [linkedin.com/in/muhammadokashapak](https://linkedin.com/in/muhammadokashapak)
+- **Facebook:** [facebook.com/muhammad.okasha.99373](https://facebook.com/muhammad.okasha.99373)
+
+## 🌐 Live Demo
+
+If deployed with GitHub Pages, view the live site here:  
+[https://muhammadokashapak.github.io/portfolio](https://muhammadokashapak.github.io/portfolio)
+
+---
+
+## 📝 License
+
+This project is open source and available under the [MIT License](LICENSE).
