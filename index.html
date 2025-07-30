@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Muhammad Okasha - Portfolio</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header id="home">
+    <div class="navbar">
+      <nav class="container">
+        <div id="logo">Okasha</div>
+        <ul>
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="header-content container" id="home">
+      <div class="animated-text-container">
+        <span class="animated-text"></span>
+      </div>
+      <p class="title">Machine Learning Engineer | AI & Web Developer</p>
+      <p class="subtitle">Transforming Ideas into Intelligent Solutions</p>
+      <div class="social">
+        <a href="https://www.facebook.com/muhammad.okasha.99373" target="_blank" title="Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/muhammad-okasha23/" target="_blank" title="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://github.com/muhammadokashapak" target="_blank" title="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="mailto:muhammadokasha195@gmail.com" title="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+      
+    </div>
+  </header>
+
+  <!-- About -->
+  <section class="about" id="about">
+    <h2>About <span class="text-primary">Me</span></h2>
+    <hr class="section-underline">
+    <div class="about-content container">
+      <div class="col-1">
+        <h3>Hello! I'm Muhammad Okasha</h3>
+        <p>I am a Machine Learning Engineer and Web Developer passionate about building creative and functional solutions. My journey includes strong technical skills and hands-on experience in Python, JavaScript, and web technologies.</p>
+      </div>
+      <div class="col-2">
+        <p>Email: muhammadokasha195@gmail.com</p>
+        <p>Phone: +92 3495696659</p>
+        <p>Location: Pakistan</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <h2>My <span class="text-primary">Skills</span></h2>
+    <hr class="section-underline">
+    <div class="skills-content container">
+      <div class="skills-section">
+        <h3 class="skills-category">Technical Skills</h3>
+        <div class="skills-grid">
+          <div class="item">Python</div>
+          <div class="item">C++</div>
+          <div class="item">Data Analysis</div>
+          <div class="item">Data Visualization</div>
+          <div class="item">Deep Learning</div>
+          <div class="item">scikit-learn</div>
+          <div class="item">Flask</div>
+          <div class="item">NLP</div>
+          <div class="item">Computer Vision</div>
+          <div class="item">Neural Networking</div>
+          <div class="item">HTML5</div>
+          <div class="item">CSS3</div>
+          <div class="item">JavaScript</div>
+          <div class="item">React</div>
+          <div class="item">GitHub</div>
+        </div>
+      </div>
+      
+      <div class="skills-section">
+        <h3 class="skills-category">Soft Skills</h3>
+        <div class="skills-grid">
+          <div class="item soft-skill">Communication</div>
+          <div class="item soft-skill">Team Work</div>
+          <div class="item soft-skill">Presentation</div>
+          <div class="item soft-skill">Time Management</div>
+          <div class="item soft-skill">Problem-Solving</div>
+          <div class="item soft-skill">Critical Thinking</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services">
+    <h2>My <span class="text-primary">Services</span></h2>
+    <hr class="section-underline">
+    <div class="services-container container">
+      <div class="services-grid">
+        <div class="service-item" data-service="web-dev">
+          <div class="service-icon">
+            <img src="https://img.icons8.com/dusk/64/code.png" alt="Web Development"/>
+          </div>
+          <h3>Web Development</h3>
+          <p>Professional websites using HTML, CSS, JavaScript, React, and backend support.</p>
+          <button class="service-btn">View Projects</button>
+        </div>
+        <div class="service-item" data-service="ai-ml">
+          <div class="service-icon">
+            <img src="https://img.icons8.com/dusk/64/brain.png" alt="AI & ML"/>
+          </div>
+          <h3>Machine Learning & Deep Learning</h3>
+          <p>Custom ML/DL solutions including computer vision, NLP, predictive modeling, and AI applications using Python, TensorFlow, and PyTorch.</p>
+          <button class="service-btn">View Projects</button>
+        </div>
+        <div class="service-item" data-service="resume">
+          <div class="service-icon">
+            <img src="https://img.icons8.com/dusk/64/document.png" alt="Resume Writing"/>
+          </div>
+          <h3>Resume Writing</h3>
+          <p>ATS-friendly and industry-focused resumes that get results.</p>
+          <button class="service-btn">View Projects</button>
+        </div>
+      </div>
+      
+      <!-- Service Projects Modal -->
+      <div id="service-projects-modal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h3 id="modal-title">Related Projects</h3>
+          <div id="modal-projects" class="modal-projects-grid">
+            <!-- Projects will be dynamically inserted here -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="projects" id="projects">
+    <h2>My <span class="text-primary">Projects</span></h2>
+    <hr class="section-underline">
+    <div class="projects-container container">
+      <div class="projects-filter">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="web-dev">Web Development</button>
+        <button class="filter-btn" data-filter="ai-ml">AI & ML</button>
+        <button class="filter-btn" data-filter="resume">Resume Writing</button>
+      </div>
+      
+      <div class="projects-grid">
+        <div class="project-card" data-category="ai-ml">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=400&h=250&fit=crop" alt="Hate Speech Detector">
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="#" class="project-link">Live Demo</a>
+                <a href="#" class="project-link">GitHub</a>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-category">Machine Learning</span>
+            <h4 class="project-title">Hate Speech Detector</h4>
+            <p class="project-description">Advanced NLP model using BERT and TensorFlow to detect and classify hate speech in social media content with 94% accuracy.</p>
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">TensorFlow</span>
+              <span class="tech-tag">BERT</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="project-card" data-category="web-dev">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=400&h=250&fit=crop" alt="Portfolio Website">
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="#" class="project-link">Live Demo</a>
+                <a href="#" class="project-link">GitHub</a>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-category">Web Development</span>
+            <h4 class="project-title">Portfolio Website</h4>
+            <p class="project-description">Responsive personal portfolio with modern design, smooth animations, and interactive features built with vanilla JavaScript.</p>
+            <div class="project-tech">
+              <span class="tech-tag">HTML5</span>
+              <span class="tech-tag">CSS3</span>
+              <span class="tech-tag">JavaScript</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="project-card" data-category="web-dev">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=250&fit=crop" alt="E-commerce Platform">
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="#" class="project-link">Live Demo</a>
+                <a href="#" class="project-link">GitHub</a>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-category">Web Development</span>
+            <h4 class="project-title">E-commerce Platform</h4>
+            <p class="project-description">Full-stack e-commerce solution with React frontend, Node.js backend, and integrated payment processing.</p>
+            <div class="project-tech">
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">MongoDB</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="project-card" data-category="ai-ml">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=250&fit=crop" alt="Color Detection">
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="#" class="project-link">Live Demo</a>
+                <a href="#" class="project-link">GitHub</a>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-category">Machine Learning</span>
+            <h4 class="project-title">Color Detection System</h4>
+            <p class="project-description">Real-time color detection using computer vision and ML techniques to identify and classify colors from images and video streams.</p>
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">OpenCV</span>
+              <span class="tech-tag">Scikit-learn</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="project-card" data-category="ai-ml">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=250&fit=crop" alt="Diabetes Testing">
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="#" class="project-link">Live Demo</a>
+                <a href="#" class="project-link">GitHub</a>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-category">Machine Learning</span>
+            <h4 class="project-title">Diabetes Testing System</h4>
+            <p class="project-description">ML-based diabetes prediction system using patient data to provide early detection and risk assessment with high accuracy.</p>
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Random Forest</span>
+              <span class="tech-tag">Flask</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="project-card" data-category="ai-ml">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=250&fit=crop" alt="Fraud Detection">
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="#" class="project-link">Live Demo</a>
+                <a href="#" class="project-link">GitHub</a>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-category">Machine Learning</span>
+            <h4 class="project-title">Fraud Detection System</h4>
+            <p class="project-description">Advanced fraud detection using anomaly detection algorithms to identify suspicious transactions in real-time financial data.</p>
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Isolation Forest</span>
+              <span class="tech-tag">Streamlit</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="project-card" data-category="ai-ml">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1549924231-f129b911e442?w=400&h=250&fit=crop" alt="Car Price Prediction">
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="#" class="project-link">Live Demo</a>
+                <a href="#" class="project-link">GitHub</a>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-category">Machine Learning</span>
+            <h4 class="project-title">Car Price Prediction</h4>
+            <p class="project-description">ML model to predict car prices based on features like brand, model, year, mileage, and condition using regression algorithms.</p>
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">XGBoost</span>
+              <span class="tech-tag">Pandas</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="project-card" data-category="ai-ml">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=250&fit=crop" alt="Chicken Pox Detection">
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="#" class="project-link">Live Demo</a>
+                <a href="#" class="project-link">GitHub</a>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-category">Deep Learning</span>
+            <h4 class="project-title">Chicken Pox Detection</h4>
+            <p class="project-description">Deep learning model using CNN to detect and classify chicken pox from skin images with high accuracy for early diagnosis.</p>
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">TensorFlow</span>
+              <span class="tech-tag">CNN</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="project-card" data-category="ai-ml">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=250&fit=crop" alt="Emotion Detection">
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="#" class="project-link">Live Demo</a>
+                <a href="#" class="project-link">GitHub</a>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-category">Deep Learning & NLP</span>
+            <h4 class="project-title">Emotion Detection System</h4>
+            <p class="project-description">Real-time emotion detection using deep learning and NLP to analyze facial expressions and text sentiment analysis.</p>
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">BERT</span>
+              <span class="tech-tag">OpenCV</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="project-card" data-category="resume">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=400&h=250&fit=crop" alt="Resume Templates">
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="#" class="project-link">View Samples</a>
+                <a href="#" class="project-link">Order Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-category">Resume Writing</span>
+            <h4 class="project-title">ATS-Optimized Resume Templates</h4>
+            <p class="project-description">Collection of professional resume templates optimized for Applicant Tracking Systems with industry-specific formats.</p>
+            <div class="project-tech">
+              <span class="tech-tag">ATS-Friendly</span>
+              <span class="tech-tag">Professional</span>
+              <span class="tech-tag">Customizable</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="project-card" data-category="resume">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=250&fit=crop" alt="Career Consultation">
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="#" class="project-link">Book Session</a>
+                <a href="#" class="project-link">Testimonials</a>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-category">Resume Writing</span>
+            <h4 class="project-title">Career Consultation Services</h4>
+            <p class="project-description">Personalized career guidance and resume optimization services with 95% client satisfaction rate and proven results.</p>
+            <div class="project-tech">
+              <span class="tech-tag">Consultation</span>
+              <span class="tech-tag">Career Guidance</span>
+              <span class="tech-tag">Success Stories</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact <span class="text-primary">Me</span></h2>
+    <hr class="section-underline">
+    <div class="contact-wrapper">
+      <div class="contact-left">
+        <div class="contact-header">
+          <h3>Let's Work Together</h3>
+          <p>Ready to start your next project? Get in touch and let's discuss how I can help bring your ideas to life.</p>
+        </div>
+        <div class="contact-methods">
+          <div class="contact-method">
+            <div class="method-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="method-details">
+              <h4>Email</h4>
+              <a href="mailto:muhammadokasha195@gmail.com">muhammadokasha195@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-method">
+            <div class="method-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <div class="method-details">
+              <h4>Phone</h4>
+              <a href="tel:+923495696659">+92 3495696659</a>
+            </div>
+          </div>
+          <div class="contact-method">
+            <div class="method-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="method-details">
+              <h4>Location</h4>
+              <span>Pakistan</span>
+            </div>
+          </div>
+        </div>
+        <div class="social-links">
+          <h4>Follow Me</h4>
+          <div class="social-icons">
+            <a href="https://github.com/muhammadokashapak" target="_blank" class="social-icon" title="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.facebook.com/muhammad.okasha.99373" target="_blank" class="social-icon" title="Facebook">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://linkedin.com/in/muhammad-okasha" target="_blank" class="social-icon" title="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="mailto:muhammadokasha195@gmail.com" class="social-icon" title="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="contact-right">
+        <div class="contact-form-card">
+          <h3>Send Message</h3>
+          <form class="contact-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label>Name</label>
+                <input type="text" placeholder="Your full name" required>
+              </div>
+              <div class="form-group">
+                <label>Email</label>
+                <input type="email" placeholder="your.email@example.com" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Subject</label>
+              <input type="text" placeholder="What's this about?" required>
+            </div>
+            <div class="form-group">
+              <label>Message</label>
+              <textarea rows="5" placeholder="Tell me about your project..." required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">
+              <span>Send Message</span>
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <p>&copy; 2025 Muhammad Okasha. All rights reserved.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
+
