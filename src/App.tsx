@@ -198,43 +198,47 @@ function App() {
         <ProjectDetailPanel project={activeProject} onClose={() => setActiveProject(null)} />
 
         <header className="hero" id="hero">
-          <div className="hero-copy">
-            <p className="eyebrow">Resume, LinkedIn & MS Office Support</p>
-            <h1>Modern career branding that helps you land interviews faster.</h1>
-            <p className="hero-text">
-              I build polished resumes, cover letters, and Office deliverables with clean styling, strong achievement language, and confidence-driving clarity.
-            </p>
-            <div className="hero-actions">
-              <a className="button primary" href="#contact">
-                Hire me now
-              </a>
-              <a className="button outline" href="#plans">
-                See Fiverr plans
-              </a>
-            </div>
-            <div className="hero-badges">
-              <div className="hero-badge">
-                <span>Fast delivery</span>
+          <div className="hero-scene">
+            <div className="hero-card">
+              <div className="hero-copy">
+                <p className="eyebrow">Resume, LinkedIn & MS Office Support</p>
+                <h1>Modern career branding that helps you land interviews faster.</h1>
+                <p className="hero-text">
+                  I build polished resumes, cover letters, and Office deliverables with clean styling, strong achievement language, and confidence-driving clarity.
+                </p>
+                <div className="hero-actions">
+                  <a className="button primary" href="#contact">
+                    Hire me now
+                  </a>
+                  <a className="button outline" href="#plans">
+                    See Fiverr plans
+                  </a>
+                </div>
+                <div className="hero-badges">
+                  <div className="hero-badge">
+                    <span>Fast delivery</span>
+                  </div>
+                  <div className="hero-badge">
+                    <span>5.0 rating</span>
+                  </div>
+                  <div className="hero-badge">
+                    <span>Resume + LinkedIn</span>
+                  </div>
+                </div>
               </div>
-              <div className="hero-badge">
-                <span>5.0 rating</span>
-              </div>
-              <div className="hero-badge">
-                <span>Resume + LinkedIn</span>
-              </div>
-            </div>
-          </div>
 
-          <div className="hero-panel">
-            <div className="profile-image-container">
-              <img src={profilePic} alt="Muhammad Huzaifa" className="profile-image" />
-              <div className="floating-badge badge-top-left">
-                <span className="badge-icon">⭐</span>
-                <span className="badge-text">Top Rated</span>
-              </div>
-              <div className="floating-badge badge-bottom-right">
-                <span className="badge-icon">⚡</span>
-                <span className="badge-text">Fast Turnaround</span>
+              <div className="hero-panel">
+                <div className="profile-image-container">
+                  <img src={profilePic} alt="Muhammad Huzaifa" className="profile-image" />
+                  <div className="floating-badge badge-top-left">
+                    <span className="badge-icon">⭐</span>
+                    <span className="badge-text">Top Rated</span>
+                  </div>
+                  <div className="floating-badge badge-bottom-right">
+                    <span className="badge-icon">⚡</span>
+                    <span className="badge-text">Fast Turnaround</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
