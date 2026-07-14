@@ -11,7 +11,6 @@ import { ResumeCard } from './components/ResumeCard';
 import { ContactForm } from './components/ContactForm';
 import { Navigation } from './components/Navigation';
 import { IntroAnimation } from './components/IntroAnimation';
-import { Scene3D } from './components/Scene3D';
 import profilePic from '../profile-pic.png';
 import review1 from '../1.png';
 import review2 from '../2.png';
@@ -189,10 +188,10 @@ const fiverrConfig = {
   openInNewTab: true,
 };
 
-// Framer Motion variants
+// Smooth animations
 const fadeInUp = {
-  hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } }
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } }
 };
 
 const staggerContainer = {
@@ -200,9 +199,14 @@ const staggerContainer = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.2
+      staggerChildren: 0.15
     }
   }
+};
+
+const imageVariants = {
+  hidden: { opacity: 0, scale: 0.9 },
+  visible: { opacity: 1, scale: 1, transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] } }
 };
 
 function App() {
@@ -211,123 +215,100 @@ function App() {
   return (
     <>
       <IntroAnimation />
-      <Scene3D />
       
-      <div className="app-shell glass-layer">
+      {/* Premium Animated Background */}
+      <div className="animated-bg">
+        <div className="bg-grid"></div>
+        <div className="bg-orb orb-1"></div>
+        <div className="bg-orb orb-2"></div>
+        <div className="bg-orb orb-3"></div>
+      </div>
+
+      <div className="app-shell">
         <Navigation />
         <ProjectDetailPanel project={activeProject} onClose={() => setActiveProject(null)} />
 
         <header className="hero" id="hero">
-          <div className="hero-scene">
+          <div className="hero-grid">
             <motion.div 
-              className="hero-card glass-card"
+              className="hero-copy"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
               variants={staggerContainer}
             >
-              <motion.div className="hero-copy" variants={fadeInUp}>
-                <p className="eyebrow glow-text">Resume, LinkedIn & MS Office Support</p>
-                <h1>Modern career branding that helps you land interviews faster.</h1>
-                <p className="hero-text">
-                  I build polished resumes, cover letters, and Office deliverables with clean styling, strong achievement language, and confidence-driving clarity.
-                </p>
-                <div className="hero-actions">
-                  <a className="button primary pulse-glow" href="#contact">
-                    Hire me now
-                  </a>
-                  <a className="button outline" href="#plans">
-                    See Fiverr plans
-                  </a>
-                </div>
-                <div className="hero-badges">
-                  <div className="hero-badge"><span>Fast delivery</span></div>
-                  <div className="hero-badge"><span>5.0 rating</span></div>
-                  <div className="hero-badge"><span>Resume + LinkedIn</span></div>
-                </div>
+              <motion.div variants={fadeInUp}>
+                <span className="eyebrow">Professional Career Services</span>
+              </motion.div>
+              <motion.h1 variants={fadeInUp}>
+                Land interviews faster with a <span className="gradient-text">powerful resume</span>.
+              </motion.h1>
+              <motion.p className="hero-text" variants={fadeInUp}>
+                I craft meticulously structured resumes, compelling LinkedIn profiles, and highly polished Microsoft Office deliverables to help you stand out.
+              </motion.p>
+              
+              <motion.div className="hero-actions" variants={fadeInUp}>
+                <a className="button primary" href="#contact">Hire me now</a>
+                <a className="button outline" href="#packages">View pricing</a>
               </motion.div>
 
-              <motion.div className="hero-panel" variants={fadeInUp}>
-                <div className="profile-image-container 3d-tilt">
-                  <img src={profilePic} alt="Muhammad Huzaifa" className="profile-image glass-border" />
-                  <div className="floating-badge badge-top-left glass-badge float-anim-1">
-                    <span className="badge-icon">⭐</span>
-                    <span className="badge-text">Top Rated</span>
-                  </div>
-                  <div className="floating-badge badge-bottom-right glass-badge float-anim-2">
-                    <span className="badge-icon">⚡</span>
-                    <span className="badge-text">Fast Turnaround</span>
-                  </div>
-                </div>
+              <motion.div className="hero-badges" variants={fadeInUp}>
+                <div className="hero-badge"><div className="dot"></div> Fast delivery</div>
+                <div className="hero-badge"><div className="dot"></div> 5.0 rating</div>
+                <div className="hero-badge"><div className="dot"></div> ATS Optimized</div>
               </motion.div>
+            </motion.div>
+
+            <motion.div 
+              className="hero-image-wrapper"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={imageVariants}
+            >
+              <div className="image-glow"></div>
+              <div className="hero-image-inner">
+                <img src={profilePic} alt="Muhammad Huzaifa" className="profile-image" />
+                <div className="floating-pill pill-1">⭐ Top Rated</div>
+                <div className="floating-pill pill-2">⚡ 24h Turnaround</div>
+              </div>
             </motion.div>
           </div>
         </header>
-
-        <motion.div 
-          className="summary-cards"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          variants={staggerContainer}
-        >
-          <motion.article className="summary-card glass-card" variants={fadeInUp} whileHover={{ y: -10, scale: 1.02 }}>
-            <h3 className="glow-text">30+ hires supported</h3>
-            <p>Resume writing and application assets tuned for recruiters and ATS systems.</p>
-          </motion.article>
-          <motion.article className="summary-card glass-card" variants={fadeInUp} whileHover={{ y: -10, scale: 1.02 }}>
-            <h3 className="glow-text">24 hour response</h3>
-            <p>Fast communication and clear project updates from brief to delivery.</p>
-          </motion.article>
-          <motion.article className="summary-card glass-card" variants={fadeInUp} whileHover={{ y: -10, scale: 1.02 }}>
-            <h3 className="glow-text">Client-focused edits</h3>
-            <p>Every package includes review rounds and document polish tailored to your needs.</p>
-          </motion.article>
-        </motion.div>
 
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeInUp}>
           <Section id="services" title="How I help" subtitle="Career branding, resumes, and Office outputs designed to feel polished and professional.">
             <div className="grid-3">
               {services.map((service, i) => (
-                <motion.article 
+                <motion.div 
                   key={service.title} 
                   className="info-card glass-card"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: i * 0.1 }}
-                  whileHover={{ scale: 1.05, rotateY: 5, rotateX: 5 }}
+                  transition={{ delay: i * 0.1, duration: 0.5 }}
+                  whileHover={{ y: -8 }}
                 >
                   <h3>{service.title}</h3>
                   <p>{service.description}</p>
-                </motion.article>
+                </motion.div>
               ))}
             </div>
           </Section>
         </motion.div>
 
-        <motion.section 
-          className="section process-section" 
-          id="process"
-          initial="hidden" 
-          whileInView="visible" 
-          viewport={{ once: true, margin: "-100px" }} 
-          variants={fadeInUp}
-        >
-          <div className="section-header">
-            <p className="section-eyebrow glow-text">Process</p>
-            <h2>Fast, clear, and collaborative.</h2>
-            <p className="section-subtitle">A simple workflow from briefing to finished files, with review rounds built in.</p>
-          </div>
-          <div className="process-grid">
-            {processSteps.map((step, index) => (
-              <ProcessBox key={step.title} step={index + 1} title={step.title} description={step.description} />
-            ))}
-          </div>
-        </motion.section>
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeInUp}>
+          <Section id="process" title="My Process" subtitle="A simple workflow from briefing to finished files, with review rounds built in.">
+            <div className="process-grid">
+              {processSteps.map((step, index) => (
+                <ProcessBox key={step.title} step={index + 1} title={step.title} description={step.description} />
+              ))}
+            </div>
+          </Section>
+        </motion.div>
 
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeInUp}>
           <Section id="packages" title="Pricing" subtitle="Choose the plan that fits your resume, cover letter, and Office asset needs.">
-            <div className="pricing-grid">
+            <div className="grid-3">
               {pricingPlans.map((plan) => (
                 <PricingCard
                   key={plan.title}
@@ -344,8 +325,8 @@ function App() {
         <PlansSection plans={pricingPlans} fiverrUrl={fiverrConfig.url} openInNewTab={fiverrConfig.openInNewTab} />
 
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeInUp}>
-          <Section id="portfolio" title="Featured projects" subtitle="Real work examples and career-branding wins.">
-            <div className="project-grid">
+          <Section id="portfolio" title="Featured Projects" subtitle="Real work examples and career-branding wins.">
+            <div className="grid-2">
               {projects.map((project) => (
                 <ProjectCard key={project.title} project={project} onSelect={setActiveProject} />
               ))}
@@ -354,7 +335,7 @@ function App() {
         </motion.div>
 
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeInUp}>
-          <Section id="testimonials" title="Client feedback" subtitle="Stories from professionals who booked resume and Office support.">
+          <Section id="testimonials" title="Client Feedback" subtitle="Stories from professionals who booked resume and Office support.">
             <div className="grid-2">
               {testimonials.map((testimonial) => (
                 <TestimonialCard
@@ -370,8 +351,8 @@ function App() {
         </motion.div>
 
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeInUp}>
-          <Section id="resume" title="Resume downloads" subtitle="Download sample resume files used in project work and case studies.">
-            <div className="resume-grid">
+          <Section id="resume" title="Resume Downloads" subtitle="Download sample resume files used in project work and case studies.">
+            <div className="grid-2">
               {resumeFiles.map((resume) => (
                 <ResumeCard key={resume.label} label={resume.label} file={resume.file} description={resume.description} />
               ))}
@@ -380,19 +361,19 @@ function App() {
         </motion.div>
 
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeInUp}>
-          <Section id="contact" title="Contact" subtitle="Ready to work together on your next application?">
-            <div className="contact-layout glass-card">
+          <Section id="contact" title="Contact Me" subtitle="Ready to work together on your next application?">
+            <div className="contact-layout">
               <div className="contact-panel">
                 <h3>Let's build your next resume package</h3>
                 <p>
-                  Reach out for a custom quote, a review of your current resume, or a full LinkedIn and Office asset package.
+                  Reach out for a custom quote, a review of your current resume, or a full LinkedIn and Office asset package. I'm ready to help you shine.
                 </p>
                 <div className="contact-links">
                   <a href="https://linkedin.com/in/muhammad-huzaifa-1aa08a282/?skipRedirect=true" target="_blank" rel="noreferrer" className="button outline">
                     LinkedIn
                   </a>
                   <a href="https://www.fiverr.com/s/1qGv4L4" target="_blank" rel="noreferrer" className="button outline">
-                    Fiverr plans
+                    Fiverr Plans
                   </a>
                 </div>
               </div>
@@ -400,6 +381,7 @@ function App() {
             </div>
           </Section>
         </motion.div>
+
       </div>
     </>
   );
