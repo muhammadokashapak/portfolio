@@ -32,7 +32,7 @@ export default function Expertise() {
         sub: "5,717 Chunks Indexed",
         icon: <Zap size={14} color="var(--accent-color)" />
       },
-      targetLink: "#rag-simulator"
+      targetLink: "#projects"
     },
     {
       title: t('exp_2_title', 'On-Device Neural AI & Edge Systems'),
@@ -47,7 +47,7 @@ export default function Expertise() {
         sub: "Air-Gapped Local Inference",
         icon: <Lock size={14} color="var(--accent-cyan)" />
       },
-      targetLink: "#tensor-visualizer"
+      targetLink: "#projects"
     },
     {
       title: t('exp_3_title', 'Computer Vision & Assistive IoT'),

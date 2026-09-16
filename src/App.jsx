@@ -3,26 +3,15 @@ import { Menu, X, FileText, Terminal, Sun, Moon, Volume2, VolumeX, Sparkles, Zap
 import Hero from './components/Hero';
 import Expertise from './components/Expertise';
 import About from './components/About';
-import ArchitectureGraph from './components/ArchitectureGraph';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
-import RagSimulator from './components/RagSimulator';
-import BenchmarkMatrix from './components/BenchmarkMatrix';
-import AiPlayground from './components/AiPlayground';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
-import CustomCursor from './components/CustomCursor';
 import TerminalModal from './components/TerminalModal';
 import RecruiterModal from './components/RecruiterModal';
 import VoiceCommandOverlay from './components/VoiceCommandOverlay';
-import RoiCalculator from './components/RoiCalculator';
-import TelemetryRadar from './components/TelemetryRadar';
-import TensorVisualizer from './components/TensorVisualizer';
-import CompetencyRadar from './components/CompetencyRadar';
 import AiChatbot from './components/AiChatbot';
-import MatrixRain from './components/MatrixRain';
 import LanguageSelector from './components/LanguageSelector';
-import IntroGreetings from './components/IntroGreetings';
 import { playSound, isSoundMuted, setSoundMuted } from './utils/soundFx';
 import { useLanguage } from './context/LanguageContext';
 
@@ -32,7 +21,6 @@ function App() {
   const [terminalOpen, setTerminalOpen] = useState(false);
   const [recruiterOpen, setRecruiterOpen] = useState(false);
   const [voiceOpen, setVoiceOpen] = useState(false);
-  const [matrixActive, setMatrixActive] = useState(false);
   const [soundMuted, setSoundMutedState] = useState(() => isSoundMuted());
   const [theme, setTheme] = useState(() => {
     return localStorage.getItem('portfolio-theme') || 'dark';
@@ -42,23 +30,6 @@ function App() {
     document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem('portfolio-theme', theme);
   }, [theme]);
-
-  // Global Dynamic Spotlight Cursor Tracker for .spotlight-card
-  useEffect(() => {
-    const handleMouseMove = (e) => {
-      const cards = document.querySelectorAll('.spotlight-card');
-      cards.forEach((card) => {
-        const rect = card.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        card.style.setProperty('--mouse-x', `${x}px`);
-        card.style.setProperty('--mouse-y', `${y}px`);
-      });
-    };
-
-    window.addEventListener('mousemove', handleMouseMove);
-    return () => window.removeEventListener('mousemove', handleMouseMove);
-  }, []);
 
   const toggleTheme = () => {
     playSound('click');
@@ -76,22 +47,18 @@ function App() {
 
   const navItems = [
     { label: t('nav_about', 'About'), href: '#about' },
+    { label: t('nav_expertise', 'Expertise'), href: '#expertise' },
     { label: t('nav_projects', 'Projects'), href: '#projects' },
+    { label: t('nav_experience', 'Experience'), href: '#experience' },
+    { label: t('nav_skills', 'Skills'), href: '#skills' },
     { label: t('nav_contact', 'Contact'), href: '#contact' },
   ];
 
   return (
     <>
-      <IntroGreetings />
-      <CustomCursor />
-      <MatrixRain isActive={matrixActive} onClose={() => setMatrixActive(false)} />
       <TerminalModal
         isOpen={terminalOpen}
         onClose={() => setTerminalOpen(false)}
-        onTriggerMatrix={() => {
-          setTerminalOpen(false);
-          setMatrixActive(true);
-        }}
       />
       <RecruiterModal
         isOpen={recruiterOpen}
@@ -423,18 +390,10 @@ function App() {
           onOpenRecruiter={() => setRecruiterOpen(true)}
           theme={theme}
         />
-        <TelemetryRadar />
         <About />
-        <ArchitectureGraph />
-        <CompetencyRadar />
         <Expertise />
         <Projects />
-        <RagSimulator />
-        <TensorVisualizer />
-        <BenchmarkMatrix />
-        <RoiCalculator />
         <Experience />
-        <AiPlayground />
         <Skills />
         <Contact />
       </main>

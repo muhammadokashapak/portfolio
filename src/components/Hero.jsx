@@ -1,72 +1,13 @@
-import React, { useRef, useMemo } from 'react';
-import { Canvas, useFrame } from '@react-three/fiber';
-import { Points, PointMaterial } from '@react-three/drei';
-import * as random from 'maath/random/dist/maath-random.esm';
+import React from 'react';
 import { motion } from 'framer-motion';
-import { FileText, Terminal, Zap, Code2 } from 'lucide-react';
+import { FileText, Terminal, Zap, Code2, Sparkles, ArrowRight } from 'lucide-react';
 import { playSound } from '../utils/soundFx';
 import AudioPitchPlayer from './AudioPitchPlayer';
 import { useLanguage } from '../context/LanguageContext';
 
-function Starfield({ color = "#00ffcc", ...props }) {
-  const ref = useRef();
-  const sphere = useMemo(() => random.inSphere(new Float32Array(5000), { radius: 1.8 }), []);
-
-  useFrame((state, delta) => {
-    if (ref.current) {
-      ref.current.rotation.x -= delta / 20;
-      ref.current.rotation.y -= delta / 30;
-    }
-  });
-
-  return (
-    <group rotation={[0, 0, Math.PI / 4]}>
-      <Points ref={ref} positions={sphere} stride={3} frustumCulled={false} {...props}>
-        <PointMaterial
-          transparent
-          color={color}
-          size={0.0035}
-          sizeAttenuation={true}
-          depthWrite={false}
-          opacity={0.65}
-        />
-      </Points>
-    </group>
-  );
-}
-
-function StarfieldViolet({ color = "#8b5cf6", ...props }) {
-  const ref = useRef();
-  const sphere = useMemo(() => random.inSphere(new Float32Array(3000), { radius: 1.4 }), []);
-
-  useFrame((state, delta) => {
-    if (ref.current) {
-      ref.current.rotation.x += delta / 25;
-      ref.current.rotation.y += delta / 35;
-    }
-  });
-
-  return (
-    <group rotation={[Math.PI / 3, 0, 0]}>
-      <Points ref={ref} positions={sphere} stride={3} frustumCulled={false} {...props}>
-        <PointMaterial
-          transparent
-          color={color}
-          size={0.004}
-          sizeAttenuation={true}
-          depthWrite={false}
-          opacity={0.55}
-        />
-      </Points>
-    </group>
-  );
-}
-
 export default function Hero({ onOpenTerminal, onOpenChat, onOpenRecruiter, theme = 'dark' }) {
-  const { t, isRTL } = useLanguage();
+  const { t } = useLanguage();
   const isLight = theme === 'light';
-  const starColor1 = isLight ? "#0284c7" : "#00ffcc";
-  const starColor2 = isLight ? "#7c3aed" : "#8b5cf6";
 
   const heroMetrics = [
     { num: "5,700+", label: t('hero_metric_1_label', 'Vector Embeddings Shipped') },
@@ -77,31 +18,57 @@ export default function Hero({ onOpenTerminal, onOpenChat, onOpenRecruiter, them
 
   return (
     <section id="home" style={{ position: 'relative', minHeight: '100dvh', width: '100%', overflow: 'hidden', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-      {/* Subtle 3D Cosmic Particle Starfield Canvas (Clean background without obstructive core) */}
-      <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 0, opacity: isLight ? 0.65 : 0.85, pointerEvents: 'none' }}>
-        <Canvas camera={{ position: [0, 0, 1.2] }}>
-          <ambientLight intensity={0.5} />
-          <pointLight position={[10, 10, 10]} intensity={1} />
-          <Starfield color={starColor1} />
-          <StarfieldViolet color={starColor2} />
-        </Canvas>
-      </div>
-
-      {/* Radiant Background Aura with refined opacity for maximum readability */}
-      <div style={{ 
-        position: 'absolute', 
-        top: '40%', 
-        left: '50%', 
-        transform: 'translate(-50%, -50%)', 
-        width: 'min(700px, 90vw)', 
-        height: 'min(700px, 90vw)', 
-        background: isLight
-          ? 'radial-gradient(circle, rgba(14,165,233,0.1) 0%, rgba(124,58,237,0.06) 45%, transparent 75%)'
-          : 'radial-gradient(circle, rgba(0,255,204,0.09) 0%, rgba(56,189,248,0.07) 35%, rgba(139,92,246,0.05) 60%, transparent 80%)', 
-        filter: 'blur(75px)', 
+      {/* High-Performance GPU Ambient Aurora Mesh (0% CPU, 120 FPS) */}
+      <div style={{
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100%',
         zIndex: 0,
-        pointerEvents: 'none'
-      }} />
+        pointerEvents: 'none',
+        overflow: 'hidden'
+      }}>
+        <div style={{
+          position: 'absolute',
+          top: '-10%',
+          left: '20%',
+          width: 'clamp(300px, 45vw, 650px)',
+          height: 'clamp(300px, 45vw, 650px)',
+          background: isLight 
+            ? 'radial-gradient(circle, rgba(2, 132, 199, 0.15) 0%, transparent 70%)'
+            : 'radial-gradient(circle, rgba(0, 255, 204, 0.12) 0%, transparent 70%)',
+          filter: 'blur(70px)',
+          transform: 'translateZ(0)',
+          borderRadius: '50%'
+        }} />
+        <div style={{
+          position: 'absolute',
+          top: '25%',
+          right: '15%',
+          width: 'clamp(280px, 40vw, 550px)',
+          height: 'clamp(280px, 40vw, 550px)',
+          background: isLight 
+            ? 'radial-gradient(circle, rgba(124, 58, 237, 0.12) 0%, transparent 70%)'
+            : 'radial-gradient(circle, rgba(139, 92, 246, 0.12) 0%, transparent 70%)',
+          filter: 'blur(70px)',
+          transform: 'translateZ(0)',
+          borderRadius: '50%'
+        }} />
+        <div style={{
+          position: 'absolute',
+          bottom: '5%',
+          left: '35%',
+          width: 'clamp(250px, 35vw, 500px)',
+          height: 'clamp(250px, 35vw, 500px)',
+          background: isLight 
+            ? 'radial-gradient(circle, rgba(14, 165, 233, 0.1) 0%, transparent 70%)'
+            : 'radial-gradient(circle, rgba(56, 189, 248, 0.08) 0%, transparent 70%)',
+          filter: 'blur(60px)',
+          transform: 'translateZ(0)',
+          borderRadius: '50%'
+        }} />
+      </div>
 
       <div style={{
         position: 'relative',
@@ -222,7 +189,7 @@ export default function Hero({ onOpenTerminal, onOpenChat, onOpenRecruiter, them
               className="btn-secondary"
               onClick={() => playSound('click')}
             >
-              <Code2 size={18} color="var(--accent-color)" /> {t('hero_cta_systems', 'View Systems (10)')}
+              <Code2 size={18} color="var(--accent-color)" /> {t('hero_cta_projects', 'Explore Projects (10)')}
             </a>
 
             <a
