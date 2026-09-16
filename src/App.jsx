@@ -76,11 +76,7 @@ function App() {
 
   const navItems = [
     { label: t('nav_about', 'About'), href: '#about' },
-    { label: t('nav_topology', 'Topology'), href: '#architecture-graph' },
-    { label: t('nav_systems', 'Systems'), href: '#projects' },
-    { label: t('nav_rag_lab', 'RAG Lab'), href: '#rag-simulator' },
-    { label: t('nav_quantization', 'Quantization'), href: '#tensor-visualizer' },
-    { label: t('nav_roi_calc', 'ROI Calculator'), href: '#roi-calculator' },
+    { label: t('nav_projects', 'Projects'), href: '#projects' },
     { label: t('nav_contact', 'Contact'), href: '#contact' },
   ];
 
