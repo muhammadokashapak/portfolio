@@ -52,7 +52,7 @@ export default function Expertise() {
     {
       title: t('exp_3_title', 'Computer Vision & Assistive IoT'),
       icon: <Eye size={32} color="var(--accent-alt)" />,
-      tag: t('exp_3_tag', 'Real-Time Embedded Perception'),
+      tag: t('exp_3_tag', 'Edge Perception & IoT'),
       tagColor: "var(--accent-alt)",
       description: t('exp_3_desc', 'Building end-to-end edge vision systems using custom quantized YOLO on ESP32-CAM and mobile hardware, coupled with OpenCV pipelines and real-time 3D spatial directional audio feedback.'),
       stack: ["YOLOv8 .tflite", "ESP32-CAM", "OpenCV", "Spatial 3D Audio", "FreeRTOS"],
@@ -198,15 +198,17 @@ export default function Expertise() {
                   href={item.targetLink}
                   onClick={() => playSound('click')}
                   style={{
-                    color: 'var(--accent-color)',
-                    background: 'rgba(0,255,204,0.1)',
+                    color: 'var(--accent-hover)',
+                    background: 'rgba(99, 102, 241, 0.12)',
+                    border: '1px solid rgba(129, 140, 248, 0.25)',
                     borderRadius: '50%',
-                    width: '28px',
-                    height: '28px',
+                    width: '30px',
+                    height: '30px',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    textDecoration: 'none'
+                    textDecoration: 'none',
+                    transition: 'all 0.2s'
                   }}
                   title="Explore Deep Architecture"
                 >

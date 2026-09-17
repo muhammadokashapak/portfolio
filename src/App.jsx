@@ -351,7 +351,7 @@ function App() {
         zIndex: 1,
         borderTop: '1px solid var(--card-border)',
         background: 'var(--bg-color)',
-        padding: 'clamp(2rem, 5vw, 3.5rem) clamp(12px, 3vw, 24px) 2rem',
+        padding: 'clamp(2.5rem, 5vw, 4rem) clamp(16px, 3vw, 24px) clamp(5rem, 9vw, 6.5rem)',
         marginTop: '2rem',
         width: '100%',
         maxWidth: '100vw',
@@ -365,8 +365,8 @@ function App() {
                 <span className="nav-brand" style={{ fontSize: 'clamp(1.15rem, 3.5vw, 1.4rem)', fontWeight: 800 }}>
                   Muhammad Okasha<span style={{ color: 'var(--accent-color)' }}>.</span>
                 </span>
-                <span className="badge-neon" style={{ display: 'inline-flex', alignItems: 'center', gap: '4px', padding: '3px 8px', fontSize: '0.72rem' }}>
-                  <span className="pulse-dot" style={{ width: '6px', height: '6px' }} /> Available for Hire
+                <span className="hero-verified-badge" style={{ fontSize: '0.72rem' }}>
+                  <span className="verified-dot" /> Available for Roles
                 </span>
               </div>
               <p style={{ color: 'var(--text-secondary)', fontSize: '0.84rem', marginTop: '6px', maxWidth: '460px', lineHeight: 1.5 }}>
@@ -395,7 +395,7 @@ function App() {
                 style={{
                   background: 'var(--btn-sec-bg)',
                   border: '1px solid var(--btn-sec-border)',
-                  color: 'var(--accent-color)',
+                  color: 'var(--accent-hover)',
                   borderRadius: '20px',
                   padding: '5px 12px',
                   fontSize: '0.78rem',
@@ -414,10 +414,10 @@ function App() {
 
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem', borderTop: '1px solid var(--card-border)', paddingTop: '1.25rem', width: '100%' }}>
             <div style={{ fontSize: '0.78rem', color: 'var(--text-muted)', maxWidth: '100%' }}>
-              © 2026 Muhammad Okasha. Engineered with Neural Precision &amp; Distributed Architecture.
+              © 2026 Muhammad Okasha. Engineered with Systems Precision &amp; Distributed Architecture.
             </div>
 
-            <div style={{ display: 'flex', gap: 'clamp(10px, 2.5vw, 16px)', alignItems: 'center', flexWrap: 'wrap' }}>
+            <div style={{ display: 'flex', gap: 'clamp(10px, 2.5vw, 16px)', alignItems: 'center', flexWrap: 'wrap', paddingRight: 'clamp(0px, 12vw, 140px)' }}>
               <a href="https://github.com/muhammadokashapak" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text-secondary)', fontSize: '0.82rem', fontWeight: 600 }}>
                 GitHub
               </a>
@@ -427,7 +427,7 @@ function App() {
               <a href="https://wa.me/923495696659" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent-emerald)', fontSize: '0.82rem', fontWeight: 600 }}>
                 WhatsApp
               </a>
-              <a href="mailto:muhammad.okasha2146@gmail.com" style={{ color: 'var(--accent-color)', fontSize: '0.82rem', fontWeight: 600 }}>
+              <a href="mailto:muhammad.okasha2146@gmail.com" style={{ color: 'var(--accent-hover)', fontSize: '0.82rem', fontWeight: 600 }}>
                 Email
               </a>
             </div>

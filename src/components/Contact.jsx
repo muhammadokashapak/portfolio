@@ -124,11 +124,11 @@ export default function Contact() {
               >
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.85rem', minWidth: 0, flex: '1 1 200px' }}>
                   <div style={{
-                    background: 'rgba(0, 255, 204, 0.1)',
-                    border: '1px solid rgba(0, 255, 204, 0.25)',
+                    background: 'rgba(99, 102, 241, 0.12)',
+                    border: '1px solid rgba(129, 140, 248, 0.28)',
                     padding: '10px',
                     borderRadius: '14px',
-                    color: 'var(--accent-color)',
+                    color: 'var(--accent-hover)',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
@@ -270,15 +270,15 @@ export default function Contact() {
                   gap: '0.85rem',
                   flexWrap: 'wrap',
                   borderRadius: '20px',
-                  border: '1px solid rgba(0, 255, 204, 0.35)',
-                  background: 'rgba(0, 255, 204, 0.04)',
+                  border: '1px solid rgba(129, 140, 248, 0.3)',
+                  background: 'rgba(99, 102, 241, 0.05)',
                   width: '100%',
                   boxSizing: 'border-box'
                 }}
               >
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.85rem', minWidth: 0, flex: '1 1 200px' }}>
                   <div style={{
-                    background: 'var(--accent-gradient)',
+                    background: 'linear-gradient(135deg, #6366f1 0%, #4f46e5 100%)',
                     padding: '10px',
                     borderRadius: '14px',
                     color: '#fff',
@@ -286,7 +286,7 @@ export default function Contact() {
                     alignItems: 'center',
                     justifyContent: 'center',
                     flexShrink: 0,
-                    boxShadow: '0 4px 15px rgba(0, 255, 204, 0.3)'
+                    boxShadow: '0 4px 15px rgba(79, 70, 229, 0.3)'
                   }}>
                     <FileText size={20} color="#fff" />
                   </div>
@@ -509,7 +509,7 @@ export default function Contact() {
 
                 <div style={{ width: '100%' }}>
                   <label style={{ display: 'block', fontSize: '0.74rem', fontWeight: 600, color: 'var(--text-muted)', marginBottom: '4px' }}>
-                    {t('contact_msg_label', 'PROJECT SCOPE / TOPIC')}
+                    {t('contact_subject_label', 'PROJECT SCOPE / TOPIC')}
                   </label>
                   <input
                     type="text"
