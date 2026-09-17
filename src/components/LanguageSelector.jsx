@@ -42,13 +42,13 @@ export default function LanguageSelector({ isMobile = false }) {
         aria-label={t('nav_choose_lang', 'Choose Language')}
         className="lang-selector-btn"
         style={{
-          height: isMobile ? '38px' : '34px',
+          height: isMobile ? '38px' : '36px',
           background: 'rgba(255, 255, 255, 0.05)',
           border: '1px solid var(--border-color)',
           backdropFilter: 'blur(12px)',
           color: 'var(--text-primary)',
-          padding: isMobile ? '0 14px' : '0 10px',
-          borderRadius: '20px',
+          padding: isMobile ? '0 14px' : '0 12px',
+          borderRadius: '18px',
           fontSize: '0.82rem',
           fontWeight: 700,
           cursor: 'pointer',
@@ -56,7 +56,7 @@ export default function LanguageSelector({ isMobile = false }) {
           alignItems: 'center',
           gap: '6px',
           transition: 'all 0.25s ease',
-          boxShadow: isOpen ? '0 0 15px rgba(0, 255, 204, 0.25)' : 'none',
+          boxShadow: isOpen ? '0 0 15px rgba(99, 102, 241, 0.25)' : 'none',
           borderColor: isOpen ? 'var(--accent-color)' : 'var(--border-color)'
         }}
       >

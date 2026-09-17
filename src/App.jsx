@@ -75,20 +75,14 @@ function App() {
       <AiChatbot />
 
       <nav className="glass-nav">
-        <div className="nav-content" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%', gap: '10px' }}>
-          {/* Mobile/Tablet Brand Logo */}
+        <div className="nav-content">
+          {/* Brand Logo (Desktop + Mobile) */}
           <a
             href="#hero"
             onClick={() => playSound('hover')}
-            className="nav-brand-mobile"
-            style={{
-              display: 'none',
-              alignItems: 'center',
-              gap: '6px',
-              textDecoration: 'none'
-            }}
+            className="nav-brand-link"
           >
-            <span className="nav-brand" style={{ fontSize: '1.15rem', fontWeight: 900, letterSpacing: '-0.5px' }}>
+            <span className="nav-brand">
               Okasha<span style={{ color: 'var(--accent-color)' }}>.</span>
             </span>
             <span className="badge-neon" style={{ fontSize: '0.66rem', padding: '2px 7px' }}>
@@ -96,20 +90,13 @@ function App() {
             </span>
           </a>
 
-          {/* Desktop Left Group: Section Links */}
-          <div className="nav-links nav-links-desktop" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+          {/* Desktop Center Group: Section Links */}
+          <div className="nav-links nav-links-desktop">
             {navItems.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
                 onClick={() => playSound('hover')}
-                style={{
-                  padding: '7px 12px',
-                  borderRadius: '12px',
-                  fontSize: '0.84rem',
-                  fontWeight: 600,
-                  whiteSpace: 'nowrap'
-                }}
               >
                 {item.label}
               </a>
@@ -117,7 +104,7 @@ function App() {
           </div>
 
           {/* Desktop Right Group: Action Suite */}
-          <div className="nav-links nav-links-desktop" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+          <div className="nav-actions-desktop">
             {/* Multilingual Selector */}
             <LanguageSelector />
 
@@ -141,12 +128,12 @@ function App() {
                 setRecruiterOpen(true);
               }}
               style={{
-                height: '34px',
+                height: '36px',
                 background: 'linear-gradient(180deg, rgba(99, 102, 241, 0.16) 0%, rgba(79, 70, 229, 0.22) 100%)',
                 border: '1px solid rgba(129, 140, 248, 0.35)',
                 color: '#c7d2fe',
-                padding: '0 14px',
-                borderRadius: '20px',
+                padding: '0 13px',
+                borderRadius: '18px',
                 fontSize: '0.82rem',
                 fontWeight: 700,
                 cursor: 'pointer',
@@ -192,12 +179,12 @@ function App() {
                 setTerminalOpen(true);
               }}
               style={{
-                height: '34px',
+                height: '36px',
                 background: 'rgba(139, 92, 246, 0.1)',
                 border: '1px solid rgba(139, 92, 246, 0.3)',
                 color: 'var(--accent-alt)',
-                padding: '0 12px',
-                borderRadius: '20px',
+                padding: '0 13px',
+                borderRadius: '18px',
                 fontSize: '0.82rem',
                 fontWeight: 700,
                 cursor: 'pointer',
@@ -216,12 +203,12 @@ function App() {
               download="Muhammad_Okasha_Resume.pdf"
               onClick={() => playSound('click')}
               style={{
-                height: '34px',
+                height: '36px',
                 background: 'linear-gradient(180deg, #6366f1 0%, #4f46e5 100%)',
                 border: '1px solid rgba(199, 210, 254, 0.35)',
                 color: '#ffffff',
                 padding: '0 16px',
-                borderRadius: '20px',
+                borderRadius: '18px',
                 fontSize: '0.82rem',
                 fontWeight: 700,
                 display: 'inline-flex',
