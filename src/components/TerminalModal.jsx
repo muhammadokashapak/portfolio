@@ -420,7 +420,7 @@ Architecture: High-Throughput Content Safety & Hate Speech Detection Microservic
               <div style={{ width: '12px', height: '12px', borderRadius: '50%', background: '#ff5f56' }} />
               <div style={{ width: '12px', height: '12px', borderRadius: '50%', background: '#ffbd2e' }} />
               <div style={{ width: '12px', height: '12px', borderRadius: '50%', background: '#27c93f' }} />
-              <span style={{ fontSize: '0.82rem', fontFamily: 'JetBrains Mono, monospace', color: '#00ffcc', marginLeft: '8px', fontWeight: 600 }}>
+              <span style={{ fontSize: '0.82rem', fontFamily: 'JetBrains Mono, monospace', color: 'var(--accent-hover)', marginLeft: '8px', fontWeight: 600 }}>
                 okasha@neural-terminal: ~ (bash v4.2)
               </span>
             </div>
@@ -518,7 +518,7 @@ Architecture: High-Throughput Content Safety & Hate Speech Detection Microservic
               fontFamily: 'JetBrains Mono, monospace'
             }}
           >
-            <span style={{ color: '#00ffcc', fontSize: '0.9rem', flexShrink: 0, fontWeight: 700 }}>
+            <span style={{ color: 'var(--accent-hover)', fontSize: '0.9rem', flexShrink: 0, fontWeight: 700 }}>
               okasha@ai-core:~$
             </span>
             <input
@@ -536,15 +536,15 @@ Architecture: High-Throughput Content Safety & Hate Speech Detection Microservic
                 fontFamily: 'JetBrains Mono, monospace',
                 fontSize: '0.9rem',
                 outline: 'none',
-                caretColor: '#00ffcc'
+                caretColor: 'var(--accent-hover)'
               }}
             />
             <button
               type="submit"
               style={{
-                background: 'rgba(0, 255, 204, 0.15)',
-                border: '1px solid #00ffcc',
-                color: '#00ffcc',
+                background: 'rgba(99, 102, 241, 0.15)',
+                border: '1px solid rgba(129, 140, 248, 0.5)',
+                color: 'var(--accent-hover)',
                 borderRadius: '8px',
                 padding: '5px 10px',
                 cursor: 'pointer',

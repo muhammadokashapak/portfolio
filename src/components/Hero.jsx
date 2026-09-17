@@ -36,9 +36,9 @@ export default function Hero({ onOpenTerminal, onOpenChat, onOpenRecruiter, them
           width: 'clamp(300px, 45vw, 650px)',
           height: 'clamp(300px, 45vw, 650px)',
           background: isLight 
-            ? 'radial-gradient(circle, rgba(2, 132, 199, 0.15) 0%, transparent 70%)'
-            : 'radial-gradient(circle, rgba(0, 255, 204, 0.12) 0%, transparent 70%)',
-          filter: 'blur(70px)',
+            ? 'radial-gradient(circle, rgba(79, 70, 229, 0.14) 0%, transparent 70%)'
+            : 'radial-gradient(circle, rgba(99, 102, 241, 0.16) 0%, transparent 70%)',
+          filter: 'blur(75px)',
           transform: 'translateZ(0)',
           borderRadius: '50%'
         }} />
@@ -49,9 +49,9 @@ export default function Hero({ onOpenTerminal, onOpenChat, onOpenRecruiter, them
           width: 'clamp(280px, 40vw, 550px)',
           height: 'clamp(280px, 40vw, 550px)',
           background: isLight 
-            ? 'radial-gradient(circle, rgba(124, 58, 237, 0.12) 0%, transparent 70%)'
+            ? 'radial-gradient(circle, rgba(124, 58, 237, 0.1) 0%, transparent 70%)'
             : 'radial-gradient(circle, rgba(139, 92, 246, 0.12) 0%, transparent 70%)',
-          filter: 'blur(70px)',
+          filter: 'blur(75px)',
           transform: 'translateZ(0)',
           borderRadius: '50%'
         }} />
@@ -62,9 +62,9 @@ export default function Hero({ onOpenTerminal, onOpenChat, onOpenRecruiter, them
           width: 'clamp(250px, 35vw, 500px)',
           height: 'clamp(250px, 35vw, 500px)',
           background: isLight 
-            ? 'radial-gradient(circle, rgba(14, 165, 233, 0.1) 0%, transparent 70%)'
-            : 'radial-gradient(circle, rgba(56, 189, 248, 0.08) 0%, transparent 70%)',
-          filter: 'blur(60px)',
+            ? 'radial-gradient(circle, rgba(2, 132, 199, 0.08) 0%, transparent 70%)'
+            : 'radial-gradient(circle, rgba(56, 189, 248, 0.07) 0%, transparent 70%)',
+          filter: 'blur(65px)',
           transform: 'translateZ(0)',
           borderRadius: '50%'
         }} />
@@ -94,18 +94,18 @@ export default function Hero({ onOpenTerminal, onOpenChat, onOpenRecruiter, them
               display: 'inline-flex',
               alignItems: 'center',
               gap: '8px',
-              background: isLight ? 'rgba(2, 132, 199, 0.08)' : 'rgba(0, 255, 204, 0.08)',
-              border: `1px solid ${isLight ? 'rgba(2, 132, 199, 0.3)' : 'rgba(0, 255, 204, 0.3)'}`,
+              background: isLight ? 'rgba(79, 70, 229, 0.06)' : 'rgba(99, 102, 241, 0.08)',
+              border: `1px solid ${isLight ? 'rgba(79, 70, 229, 0.25)' : 'rgba(129, 140, 248, 0.28)'}`,
               padding: '6px 18px',
               borderRadius: '30px',
               marginBottom: '1.5rem',
               pointerEvents: 'auto',
               backdropFilter: 'blur(12px)',
-              boxShadow: `0 0 20px ${isLight ? 'rgba(2, 132, 199, 0.15)' : 'rgba(0, 255, 204, 0.15)'}`
+              boxShadow: `0 4px 20px -4px ${isLight ? 'rgba(79, 70, 229, 0.12)' : 'rgba(99, 102, 241, 0.2)'}`
             }}
           >
-            <span className="pulse-dot" />
-            <span style={{ color: 'var(--accent-color)', fontSize: '0.86rem', fontWeight: 700, letterSpacing: '0.3px' }}>
+            <span className="pulse-dot" style={{ background: '#10b981', boxShadow: '0 0 10px #10b981' }} />
+            <span style={{ color: 'var(--accent-hover)', fontSize: '0.86rem', fontWeight: 600, letterSpacing: '0.3px' }}>
               {t('hero_status', 'Available for AI / ML Engineer & Solutions Architect Roles')}
             </span>
           </div>
@@ -171,11 +171,11 @@ export default function Hero({ onOpenTerminal, onOpenChat, onOpenRecruiter, them
               }}
               className="btn-primary"
               style={{
-                background: 'linear-gradient(135deg, #00ffcc 0%, #38bdf8 50%, #8b5cf6 100%)',
-                color: '#030308',
-                fontWeight: 800,
-                boxShadow: '0 0 25px rgba(0, 255, 204, 0.45)',
-                border: 'none',
+                background: 'linear-gradient(180deg, #6366f1 0%, #4f46e5 100%)',
+                color: '#ffffff',
+                fontWeight: 700,
+                border: '1px solid rgba(199, 210, 254, 0.35)',
+                boxShadow: 'inset 0 1px 0 rgba(255, 255, 255, 0.25), 0 8px 24px -4px rgba(79, 70, 229, 0.5)',
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: '8px'

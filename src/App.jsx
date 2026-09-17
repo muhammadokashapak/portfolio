@@ -91,8 +91,8 @@ function App() {
             <span className="nav-brand" style={{ fontSize: '1.15rem', fontWeight: 900, letterSpacing: '-0.5px' }}>
               Okasha<span style={{ color: 'var(--accent-color)' }}>.</span>
             </span>
-            <span className="badge-neon" style={{ fontSize: '0.66rem', padding: '2px 6px' }}>
-              <span className="pulse-dot" style={{ width: '5px', height: '5px' }} /> AI
+            <span className="badge-neon" style={{ fontSize: '0.66rem', padding: '2px 7px' }}>
+              <span className="pulse-dot" style={{ width: '5px', height: '5px', background: '#10b981', boxShadow: '0 0 8px #10b981' }} /> AI
             </span>
           </a>
 
@@ -142,23 +142,23 @@ function App() {
               }}
               style={{
                 height: '34px',
-                background: 'linear-gradient(135deg, rgba(0,255,204,0.14) 0%, rgba(56,189,248,0.14) 100%)',
-                border: '1px solid var(--accent-color)',
-                color: 'var(--accent-color)',
+                background: 'linear-gradient(180deg, rgba(99, 102, 241, 0.16) 0%, rgba(79, 70, 229, 0.22) 100%)',
+                border: '1px solid rgba(129, 140, 248, 0.35)',
+                color: '#c7d2fe',
                 padding: '0 14px',
                 borderRadius: '20px',
                 fontSize: '0.82rem',
-                fontWeight: 800,
+                fontWeight: 700,
                 cursor: 'pointer',
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: '6px',
                 whiteSpace: 'nowrap',
-                boxShadow: '0 0 15px rgba(0,255,204,0.22)'
+                boxShadow: '0 2px 10px rgba(99, 102, 241, 0.2)'
               }}
               title="Open Recruiter 30-Second Executive Fast-Track"
             >
-              <Zap size={14} /> <span>{t('nav_recruiter_brief', 'Recruiter Brief')}</span>
+              <Zap size={14} color="#a5b4fc" /> <span>{t('nav_recruiter_brief', 'Recruiter Brief')}</span>
             </button>
 
             {/* Audio Sound Effects Toggle */}
@@ -168,7 +168,7 @@ function App() {
               title={soundMuted ? "Unmute Sci-Fi UI Sounds" : "Mute Sci-Fi UI Sounds"}
               aria-label="Toggle Sound Effects"
             >
-              {soundMuted ? <VolumeX size={15} color="var(--text-muted)" /> : <Volume2 size={15} color="var(--accent-color)" />}
+              {soundMuted ? <VolumeX size={15} color="var(--text-muted)" /> : <Volume2 size={15} color="var(--accent-hover)" />}
             </button>
 
             {/* Theme Switcher Button */}
@@ -193,8 +193,8 @@ function App() {
               }}
               style={{
                 height: '34px',
-                background: 'rgba(139, 92, 246, 0.12)',
-                border: '1px solid rgba(139, 92, 246, 0.4)',
+                background: 'rgba(139, 92, 246, 0.1)',
+                border: '1px solid rgba(139, 92, 246, 0.3)',
                 color: 'var(--accent-alt)',
                 padding: '0 12px',
                 borderRadius: '20px',
@@ -217,8 +217,9 @@ function App() {
               onClick={() => playSound('click')}
               style={{
                 height: '34px',
-                background: 'var(--accent-gradient)',
-                color: '#fff',
+                background: 'linear-gradient(180deg, #6366f1 0%, #4f46e5 100%)',
+                border: '1px solid rgba(199, 210, 254, 0.35)',
+                color: '#ffffff',
                 padding: '0 16px',
                 borderRadius: '20px',
                 fontSize: '0.82rem',
@@ -227,7 +228,7 @@ function App() {
                 alignItems: 'center',
                 gap: '6px',
                 whiteSpace: 'nowrap',
-                boxShadow: '0 4px 14px rgba(0, 255, 204, 0.25)',
+                boxShadow: 'inset 0 1px 0 rgba(255, 255, 255, 0.25), 0 4px 14px rgba(79, 70, 229, 0.35)',
                 textDecoration: 'none'
               }}
             >

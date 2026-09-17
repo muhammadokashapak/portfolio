@@ -5,7 +5,7 @@ import { useLanguage } from '../context/LanguageContext';
 
 const skillCategories = [
   {
-    icon: <Bot size={22} color="#00ffcc" />,
+    icon: <Bot size={22} color="#6366f1" />,
     title: "Generative AI, RAG & LLMs",
     description: "Enterprise vector pipelines, multimodal agents & semantic retrieval",
     skills: [

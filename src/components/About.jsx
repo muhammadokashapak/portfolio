@@ -92,25 +92,35 @@ export default function About() {
             style={{ display: 'flex', justifyContent: 'center' }}
           >
             <div style={{ position: 'relative', width: 'clamp(190px, 45vw, 240px)', height: 'clamp(190px, 45vw, 240px)' }}>
-              {/* Animated Glowing Ring */}
+              {/* VIP Ambient Studio Backlight Glow */}
               <div
                 style={{
                   position: 'absolute',
-                  inset: '-6px',
+                  inset: '-10px',
                   borderRadius: '50%',
-                  background: 'conic-gradient(from 0deg, #00ffcc, #38bdf8, #8b5cf6, #f43f5e, #00ffcc)',
-                  animation: 'spin 6s linear infinite',
-                  zIndex: 0,
-                  filter: 'drop-shadow(0 0 16px rgba(0, 255, 204, 0.45))'
+                  background: 'radial-gradient(circle, rgba(99, 102, 241, 0.35) 0%, rgba(56, 189, 248, 0.18) 50%, transparent 75%)',
+                  filter: 'blur(20px)',
+                  zIndex: 0
+                }}
+              />
+              {/* Outer Precision Hairline Rim */}
+              <div
+                style={{
+                  position: 'absolute',
+                  inset: '-3px',
+                  borderRadius: '50%',
+                  border: '1px solid rgba(255, 255, 255, 0.15)',
+                  background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(99, 102, 241, 0.2) 100%)',
+                  zIndex: 1
                 }}
               />
               <div
                 style={{
                   position: 'absolute',
-                  inset: '3px',
+                  inset: '2px',
                   borderRadius: '50%',
                   background: 'var(--bg-color)',
-                  zIndex: 1
+                  zIndex: 2
                 }}
               />
               <img
@@ -118,12 +128,13 @@ export default function About() {
                 alt="Muhammad Okasha"
                 style={{
                   position: 'absolute',
-                  inset: '6px',
+                  inset: '5px',
                   borderRadius: '50%',
-                  width: 'calc(100% - 12px)',
-                  height: 'calc(100% - 12px)',
+                  width: 'calc(100% - 10px)',
+                  height: 'calc(100% - 10px)',
                   objectFit: 'cover',
-                  zIndex: 2
+                  zIndex: 3,
+                  border: '1px solid rgba(255, 255, 255, 0.08)'
                 }}
               />
             </div>

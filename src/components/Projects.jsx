@@ -33,7 +33,7 @@ export const allProjects = [
     subtitle: "Enterprise GoHighLevel RAG Platform with Gemini 3.7 & ChromaDB",
     category: "GenAI & RAG",
     status: "Production Ready",
-    icon: <Bot size={26} color="#00ffcc" />,
+    icon: <Bot size={26} color="#6366f1" />,
     github: "https://github.com/muhammadokashapak",
     metrics: [
       { val: "5,717+", label: "Indexed Vector Chunks" },
@@ -183,7 +183,7 @@ export const allProjects = [
     subtitle: "AI-Powered Medical Licensure & Clinical MCQ Preparation Engine",
     category: "HealthTech & EdTech",
     status: "Deployed Suite",
-    icon: <Stethoscope size={26} color="#00ffcc" />,
+    icon: <Stethoscope size={26} color="#10b981" />,
     github: "https://github.com/muhammadokashapak",
     metrics: [
       { val: "10,000+", label: "High-Yield Medical MCQs" },
@@ -243,7 +243,7 @@ export const allProjects = [
     subtitle: "Hybrid Edge-Computing Vision Headset for the Visually Impaired",
     category: "Vision & On-Device AI",
     status: "Hardware Prototype",
-    icon: <Glasses size={26} color="#00ffcc" />,
+    icon: <Glasses size={26} color="#8b5cf6" />,
     github: "https://github.com/muhammadokashapak/okasha",
     metrics: [
       { val: "INT8", label: "Quantized Custom YOLO" },

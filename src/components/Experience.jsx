@@ -13,7 +13,7 @@ export default function Experience() {
       location: "Peshawar, Pakistan",
       duration: t('work_exp_1_period', 'Oct 2025 – Feb 2026'),
       type: "Work",
-      color: "#00ffcc",
+      color: "#6366f1",
       icon: <TrendingUp size={22} />,
       highlights: ["250% Revenue Surge", "20+ Campaigns", "C-Suite Reporting"],
       points: [

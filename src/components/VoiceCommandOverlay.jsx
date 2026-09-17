@@ -243,13 +243,13 @@ export default function VoiceCommandOverlay({
                 height: '84px',
                 borderRadius: '50%',
                 background: isListening ? 'var(--accent-gradient)' : 'var(--btn-sec-bg)',
-                border: `2px solid ${isListening ? '#00ffcc' : 'var(--card-border)'}`,
-                color: isListening ? '#030308' : 'var(--accent-color)',
+                border: `2px solid ${isListening ? 'var(--accent-hover)' : 'var(--card-border)'}`,
+                color: isListening ? '#ffffff' : 'var(--accent-color)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 cursor: 'pointer',
-                boxShadow: isListening ? '0 0 35px rgba(0, 255, 204, 0.6)' : 'none',
+                boxShadow: isListening ? '0 0 35px rgba(99, 102, 241, 0.55)' : 'none',
                 transition: 'all 0.3s'
               }}
             >
