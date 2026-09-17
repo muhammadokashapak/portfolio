@@ -132,33 +132,34 @@ export default function AiChatbot() {
           bottom: '24px',
           right: '24px',
           zIndex: 9990,
-          background: 'var(--accent-gradient)',
-          color: '#ffffff',
-          border: 'none',
-          borderRadius: '50px',
-          padding: '12px 22px',
-          boxShadow: '0 8px 30px rgba(0, 255, 204, 0.45), 0 0 20px rgba(139, 92, 246, 0.3)',
+          background: 'var(--card-bg)',
+          color: 'var(--text-primary)',
+          border: '1px solid var(--card-border)',
+          backdropFilter: 'blur(20px)',
+          WebkitBackdropFilter: 'blur(20px)',
+          borderRadius: '30px',
+          padding: '10px 18px',
+          boxShadow: '0 8px 30px rgba(0, 0, 0, 0.35), 0 0 15px rgba(99, 102, 241, 0.15)',
           display: 'flex',
           alignItems: 'center',
-          gap: '10px',
+          gap: '9px',
           cursor: 'pointer',
-          fontWeight: 700,
-          fontFamily: 'var(--font-display)',
-          fontSize: '0.94rem',
-          letterSpacing: '0.2px'
+          fontWeight: 600,
+          fontFamily: 'var(--font-sans)',
+          fontSize: '0.86rem',
+          letterSpacing: '0.1px'
         }}
         className="ai-widget-trigger-btn"
-        aria-label="Open Okasha AI Personal Widget"
+        aria-label="Open Assistant Widget"
       >
-        <Sparkles size={18} />
-        <span>Ask Okasha AI</span>
+        <Sparkles size={16} color="var(--accent-hover)" />
+        <span>Ask Assistant</span>
         <span
           style={{
-            width: '8px',
-            height: '8px',
+            width: '7px',
+            height: '7px',
             borderRadius: '50%',
             background: '#10b981',
-            boxShadow: '0 0 10px #10b981',
             display: 'inline-block'
           }}
         />

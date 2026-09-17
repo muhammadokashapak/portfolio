@@ -85,9 +85,6 @@ function App() {
             <span className="nav-brand">
               Okasha<span style={{ color: 'var(--accent-color)' }}>.</span>
             </span>
-            <span className="badge-neon" style={{ fontSize: '0.66rem', padding: '2px 7px' }}>
-              <span className="pulse-dot" style={{ width: '5px', height: '5px', background: '#10b981', boxShadow: '0 0 8px #10b981' }} /> AI
-            </span>
           </a>
 
           {/* Desktop Center Group: Section Links */}
@@ -107,19 +104,6 @@ function App() {
           <div className="nav-actions-desktop">
             {/* Multilingual Selector */}
             <LanguageSelector />
-
-            {/* Voice Command Button */}
-            <button
-              onClick={() => {
-                playSound('open');
-                setVoiceOpen(true);
-              }}
-              className="sound-toggle-btn"
-              title="Voice Control Mode"
-              aria-label="Voice Command Mode"
-            >
-              <Mic size={15} />
-            </button>
 
             {/* Recruiter Fast-Track Header Pill */}
             <button
@@ -152,7 +136,7 @@ function App() {
             <button
               onClick={toggleSound}
               className="sound-toggle-btn"
-              title={soundMuted ? "Unmute Sci-Fi UI Sounds" : "Mute Sci-Fi UI Sounds"}
+              title={soundMuted ? "Unmute UI Sounds" : "Mute UI Sounds"}
               aria-label="Toggle Sound Effects"
             >
               {soundMuted ? <VolumeX size={15} color="var(--text-muted)" /> : <Volume2 size={15} color="var(--accent-hover)" />}
@@ -170,31 +154,6 @@ function App() {
               ) : (
                 <Moon size={15} color="#7c3aed" />
               )}
-            </button>
-
-            {/* CLI Terminal Launcher */}
-            <button
-              onClick={() => {
-                playSound('open');
-                setTerminalOpen(true);
-              }}
-              style={{
-                height: '36px',
-                background: 'rgba(139, 92, 246, 0.1)',
-                border: '1px solid rgba(139, 92, 246, 0.3)',
-                color: 'var(--accent-alt)',
-                padding: '0 13px',
-                borderRadius: '18px',
-                fontSize: '0.82rem',
-                fontWeight: 700,
-                cursor: 'pointer',
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '6px',
-                whiteSpace: 'nowrap'
-              }}
-            >
-              <Terminal size={14} /> <span>{t('nav_cli', 'CLI')}</span>
             </button>
 
             {/* Resume Download */}
